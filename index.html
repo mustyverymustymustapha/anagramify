@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anagramify</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel = "stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="header-content">
+                <h1>Anagramify</h1>
+                <nav>
+                    <button class="nav-button" id="aboutButton"><i class="fas fa-info-circle"></i></button>
+                    <button class="nav-button" id="instructionsButton"><i class="fas fa-question-circle"></i></button>
+                    <button class="nav-button" id="exploreButton"><i class="fas fa-user"></i></button>
+                </nav>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="intro">
+                <p class="header-text">Unscramble the sentence!</p>
+            </div>
+            <div id="sentence" class="scrambled-sentence"></div>
+            <input type="text" id="userInput" placeholder="Type your answer here">
+            <div class="buttons">
+                <button id="submit" class="game-button">Submit</button>
+                <button id="hint" class="game-button">Hint</button>
+            </div>
+            <div id="result"></div>
+            <button id="playAgain" class="game-button hidden">Play Again</button>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by <a href="https://github.com/mustyverymustymustapha" target="_blank">Musty</a></p>
+        </footer>
+
+
+        <div id="aboutModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">About The Game</div>
+                <p>This is an anagram game made by me where each word in a sentence is randomly scrambled. Your goal is to unscramble them!</p>
+                <button class="close-button" id="closeAboutModal">Close</button>
+            </div>
+        </div>
+
+
+        <div id="instructionsModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">Instructions</div>
+                <p>Fix the sentence by unscrambling it into the correct order in the input box.</p>
+                <p>If you're stuck, click "Hint" to get a clue!</p>
+                <button class="close-button" id="closeInstructionsModal">Close</button>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
