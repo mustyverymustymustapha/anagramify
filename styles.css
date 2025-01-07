@@ -32,10 +32,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-h1 i {
-    font-size: 2rem;
+    text-transform: lowercase;
 }
 
 nav {
@@ -161,6 +158,10 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer p {
+    text-transform: lowercase;
 }
 
 .modal {
