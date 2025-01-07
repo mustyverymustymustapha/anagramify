@@ -1,3 +1,4 @@
+![IMG_0220](https://github.com/user-attachments/assets/a4724b47-4bc4-41b8-9f9b-9e96287c79f0)
 # **Anagramify**
 
 Anagramify is a fun and interactive web-game where users are tasked with unscrambling sentences while keeping and preserving punctuation! Challenge yourself, improve on your knowledge of vocabulary, and just have an awesome time playing!
