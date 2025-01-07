@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutModal = document.getElementById('aboutModal');
     const instructionsModal = document.getElementById('instructionsModal');
     const closeAboutModal = document.getElementById('closeAboutModal');
-    const closeInstructionsModal = document.getElementById('closeInstructionsModal')
+    const closeInstructionsModal = document.getElementById('closeInstructionsModal');
     const sentenceDisplay = document.getElementById('sentence');
     const userInput = document.getElementById('userInput');
     const submitButton = document.getElementById('submit');
@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSentence = '';
     let scrambledWords = [];
 
+    // Scramble words function (not characters inside words)
     function scrambleSentence(sentence) {
-        return sentence.split('').map(word => {
-            const scrambled = word.split('').sort(() => Math.random() - 0.5).join('');
-            return scrambled;
-        })
+        const words = sentence.split(' ');
+        // Shuffle the words in the sentence
+        return words.sort(() => Math.random() - 0.5);
     }
 
     function startNewGame() {
         currentSentence = sentences[Math.floor(Math.random() * sentences.length)];
         scrambledWords = scrambleSentence(currentSentence);
-        sentenceDisplay.textContent = scrambledWords.join('');
+        sentenceDisplay.textContent = scrambledWords.join(' ');  // Join words with spaces
         resultDisplay.textContent = '';
 
         playAgainButton.classList.add('hidden');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             playAgainButton.classList.remove('hidden');
         } else {
-            resultDisplay.textContent = 'Incorrect. Try again! 🧠'
+            resultDisplay.textContent = 'Incorrect. Try again! 🧠';
         }
     });
 
@@ -95,5 +95,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     startNewGame();
-
 });
